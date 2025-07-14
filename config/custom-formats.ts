@@ -12,7 +12,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Pidgeot",
 		types: ["Normal", "Flying"],
 		baseStats: { hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101 },
-		abilities: { 0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks" },
+		abilities: { 0: "Keen Eye", 1: "Tangled Feet", 2: "Keen Eye + Sheer Force", 3: "Tangled Feet + Sheer Force", H: "Big Pecks", H: "Big Pecks + Sheer Force" },
 		heightm: 1.5,
 		weightkg: 39.5,
 		color: "Brown",
