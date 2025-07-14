@@ -3,8 +3,10 @@
 Standard NatDex
 Adjust Level = 200
 
-// abilities
+//moves
 
+//charizard
+- pidgeot, +Bleakwind Storm
 //test 1: pigeot, Pidgeot abilities
 export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pidgeot: {
@@ -37,7 +39,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 			move.ignoreEvasion = true;
 		},
 	},
-	sheerforce: {
 		onModifyMove(move, pokemon) {
 			if (move.secondaries) {
 				delete move.secondaries;
