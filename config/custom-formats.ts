@@ -36,10 +36,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		onModifyMove(move) {
 			move.ignoreEvasion = true;
 		},
-		flags: { breakable: 1 },
-		name: "Keen Eye",
-		rating: 0.5,
-		num: 51,
 	},
 	sheerforce: {
 		onModifyMove(move, pokemon) {
@@ -57,51 +53,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
 		},
 		flags: {},
-		name: "Sheer Force",
-		rating: 3.5,
-		num: 125,
+		name: "Keen Eye + Sheer Force",
+		rating: 5,
+		num: 1020,
 	},
 };
-			
-//			sheerforce: {
-		onModifyMove(move, pokemon) {
-			if (move.secondaries) {
-				delete move.secondaries;
-				// Technically not a secondary effect, but it is negated
-				delete move.self;
-				if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
-				// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
-				move.hasSheerForce = true;
-			}
-		},
-		onBasePowerPriority: 21,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
-		},
-		flags: {},
-		name: "Sheer Force",
-		rating: 3.5,
-		num: 125,
-	},
-
-			
-			sheerforce: {
-		onModifyMove(move, pokemon) {
-			if (move.secondaries) {
-				delete move.secondaries;
-				// Technically not a secondary effect, but it is negated
-				delete move.self;
-				if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
-				// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
-				move.hasSheerForce = true;
-			}
-		},
-		onBasePowerPriority: 21,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
-		},
-		flags: {},
-		name: "Sheer Force",
-		rating: 3.5,
-		num: 125,
-	},
