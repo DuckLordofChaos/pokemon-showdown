@@ -23,7 +23,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		formeOrder: ["Pidgeot", "Pidgeot-Mega"],
 };
 
-	keeneye: {
+	keeneye_sheerforce: {
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			if (boost.accuracy && boost.accuracy < 0) {
@@ -41,7 +41,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		rating: 0.5,
 		num: 51,
 	},
-sheerforce: {
+	sheerforce: {
 		onModifyMove(move, pokemon) {
 			if (move.secondaries) {
 				delete move.secondaries;
@@ -61,9 +61,9 @@ sheerforce: {
 		rating: 3.5,
 		num: 125,
 	},
-
+};
 			
-			sheerforce: {
+//			sheerforce: {
 		onModifyMove(move, pokemon) {
 			if (move.secondaries) {
 				delete move.secondaries;
